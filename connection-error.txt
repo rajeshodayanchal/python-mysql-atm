@@ -1,0 +1,78 @@
+I see the error 👇
+
+```
+ModuleNotFoundError: No module named 'mysql'
+```
+
+Even though you installed `mysql-connector-python`, Python still can’t find it. This usually happens due to one of these reasons:
+
+---
+
+### ✅ Possible Causes & Fixes
+
+1. **Different Python Versions (pip vs py)**
+
+   * You might have installed the connector with one Python version, but running the script with another.
+   * Check which pip installed it:
+
+     ```bash
+     pip show mysql-connector-python
+     ```
+   * Or for the specific Python version:
+
+     ```bash
+     py -m pip show mysql-connector-python
+     ```
+   * If not found, install with:
+
+     ```bash
+     py -m pip install mysql-connector-python
+     ```
+
+2. **You Installed `mysql-connector` Instead of `mysql-connector-python`**
+
+   * `mysql-connector` (without `-python`) is **not maintained** and often causes conflicts.
+   * Uninstall both first:
+
+     ```bash
+     pip uninstall mysql-connector mysql-connector-python -y
+     ```
+   * Then reinstall the correct one:
+
+     ```bash
+     py -m pip install mysql-connector-python
+     ```
+
+3. **Virtual Environment Issue**
+
+   * If you’re inside a venv, the package must be installed inside it.
+   * Run:
+
+     ```bash
+     py -m pip list
+     ```
+
+     and check if `mysql-connector-python` shows up.
+
+4. **Check the Import**
+
+   * Your code should have:
+
+     ```python
+     import mysql.connector
+     ```
+   * Not `import mysql` or `import MySQLdb` (that’s a different library).
+
+---
+
+👉 Quick test: After installing correctly, run in terminal:
+
+```bash
+py -c "import mysql.connector; print('Connector OK')"
+```
+
+If it prints `Connector OK`, you’re good. 🚀
+
+---
+
+Do you want me to give you the **exact installation command** that matches the Python version you’re using for `db1.py`?
