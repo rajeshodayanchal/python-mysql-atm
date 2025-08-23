@@ -1,6 +1,8 @@
 പ്രോഗ്രാമിൽ transactions എന്ന ടേബിൾ ഉപയോഗിക്കേണ്ടി വന്നിട്ടില്ല. users എന്ന ടേബിളിൽ തന്നെ balance എമൗണ്ട് ഉള്ളതിനാൽ 
 അതുവെച്ച് മാനേജ് ചെയ്തു. കൃത്യമായ ഓരോ ട്രാൻസാക്ഷൻസും വേണമെങ്കിൽ transactions എന്ന ടേബിളിലും രേക്ഖപ്പെടുത്തി
-വെയ്ക്കാവുന്നതാണ്.
+വെയ്ക്കാവുന്നതാണ്. 
+
+രണ്ടാമത്തെ പ്രോഗ്രാമിൽ (atm-update.py) ഇക്കാര്യവും ചെയ്തിട്ടുണ്ട്.
 
 CREATE DATABASE IF NOT EXISTS atm_db;
 USE atm_db;
@@ -21,3 +23,4 @@ CREATE TABLE transactions (
 );
 
 INSERT INTO users (username, password, balance) VALUES ('rajesh', 'odayanchal', 1000.00);
+
