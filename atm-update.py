@@ -208,3 +208,50 @@ if __name__ == "__main__":
     # Update these with your MySQL database credentials
     atm = ATM("localhost", "root", "", "atm_db")
     atm.run()
+    
+    # What it if __name__ == "__main__":? does?
+    # This line checks if the script is being run directly (not imported as a module).
+    # If it is run directly, it creates an instance of the ATM class and calls the run() method to start the program.
+    
+    # What is the use of self in Python?
+    # In Python, self is a reference to the current instance of the class.  It is used to access variables and methods associated with the instance.
+    # It must be the first parameter of any function in the class.
+    # It allows you to differentiate between instance variables and local variables within methods.
+    # It is a convention to name it self, but you can use any name you like.
+    
+    # What is the use of __init__ method in Python?
+    # The __init__ method in Python is a special method that is called when an instance of a class is created.
+    # It is used to initialize the attributes of the class. 
+    
+    # How many methods are there in the ATM class?
+    # There are 16 methods in the ATM class: 
+    # __init__, connect_db, close_db, _log_transaction, login, check_balance, 
+    # deposit, withdraw, change_password, logout, display_menu, run, main_loop
+    # The __init__ method is the constructor that initializes the ATM object with database connection parameters.
+    # The connect_db method establishes a connection to the MySQL database.
+    # The close_db method closes the database connection.
+    # The _log_transaction method logs each transaction into the transactions table.
+    # The login method handles user authentication.
+    # The check_balance method displays the current account balance.
+    # The deposit method allows users to deposit money into their account.
+    # The withdraw method allows users to withdraw money from their account.
+    # The change_password method allows users to change their account password.
+    # The logout method logs the user out of the system.
+    # The display_menu method shows the main ATM menu options.
+    # The run method is the main program loop that handles user interaction.
+    # The main_loop method handles the logic after a successful login.
+    # Each method has a specific purpose and contributes to the overall functionality of the ATM system.
+    # The __init__ method initializes the ATM object with database connection parameters.
+    # The connect_db method establishes a connection to the MySQL database.
+    # The close_db method closes the database connection.
+    # The _log_transaction method logs each transaction into the transactions table.
+    # The login method handles user authentication.
+    # The check_balance method displays the current account balance.
+    # The deposit method allows users to deposit money into their account.
+    # The withdraw method allows users to withdraw money from their account.
+    # The change_password method allows users to change their account password.
+    # The logout method logs the user out of the system.
+    # The display_menu method shows the main ATM menu options.
+    # The run method is the main program loop that handles user interaction.
+    # The main_loop method handles the logic after a successful login.
+    # Each method has a specific purpose and contributes to the overall functionality of the ATM system.
